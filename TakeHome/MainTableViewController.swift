@@ -78,7 +78,11 @@ extension MainTableViewController{
                         self.results.append(tmpAr)
                     }
                 }
-                self.tableView.reloadData()
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
             }
             
             
